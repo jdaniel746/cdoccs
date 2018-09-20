@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+  userForm: FormGroup;
+
+  constructor(private frmBuilder: FormBuilder) { }
 
   ngOnInit() {
+ this.userForm = this.frmBuilder.group({
+  
+    });
   }
 
 }
