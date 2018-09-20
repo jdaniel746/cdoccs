@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-navbar-mobile',
   templateUrl: './navbar-mobile.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarMobileComponent implements OnInit {
 
-  constructor() { }
+  peopleForm: FormGroup;
+
+  constructor(private frmBuilder: FormBuilder) { }
 
   ngOnInit() {
+   this.peopleForm = this.frmBuilder.group({
+      
+    });
   }
 
 }
